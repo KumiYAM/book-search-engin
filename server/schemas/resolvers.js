@@ -73,6 +73,7 @@ const resolvers = {
 
             throw new AuthenticationError('You need to be logged in!');
         },
+        /*
         addReaction: async (parent, { bookId, reactionBody }, context) => {
             if (context.user) {
                 const updatedBook = await Book.findOneAndUpdate(
@@ -86,6 +87,7 @@ const resolvers = {
 
             throw new AuthenticationError('You need to be logged in!');
         },
+        */
     }
 };
 
