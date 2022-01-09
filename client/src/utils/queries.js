@@ -12,17 +12,17 @@ export const QUERY_BOOKS = gql`
   }
 `;
 
-export const QUERY_BOOKS = gql`
-  query books($id: ID!) {
-    book(_id: $id) {
-      _id
-      bookText
-      createdAt
-      username
-      }
-    }
-  }
-`;
+// export const QUERY_BOOKS = gql`
+//   query books($id: ID!) {
+//     book(_id: $id) {
+//       _id
+//       bookText
+//       createdAt
+//       username
+//       }
+//     }
+//   }
+// `;
 
 export const QUERY_USER = gql`
   query user($username: String!) {
