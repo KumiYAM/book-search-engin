@@ -1,9 +1,10 @@
 
 # 🏗️ Book Search Engine
 ## Description
-    This app is functioning Google Books API search engine built with a GraphQL API built with Apollo Server. 
-    The app was built using the MERN stack.
 
+    This app is functioning as a books search engine.<br/>
+    It's already set up to allow users to save book searches to the back end.<br/>
+     
 ## Table of Contents
 
 - [Title](#title)
@@ -19,9 +20,10 @@
 
 ## Technplogy used
    Apollo Server
-   GraghQL 
+   GraghQL (mutation and fetch and modify data)
+   GraghQL API
    React
-   Node modules
+   Node.js
 
 ## Installation
    Due to on going process of building the application, installation is not avalable to public now.<br/>
