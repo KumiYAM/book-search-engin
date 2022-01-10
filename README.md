@@ -2,8 +2,8 @@
 # 🏗️ Book Search Engine
 ## Description
 
-    This app is functioning as a books search engine.<br/>
-    It's already set up to allow users to save book searches to the back end.<br/>
+    This app is functioning as a books search engine.
+    It's already set up to allow users to save book searches to the back end.
      
 ## Table of Contents
 
