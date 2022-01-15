@@ -1,5 +1,4 @@
 import React from 'react';
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import {
   ApolloClient,
   InMemoryCache,
@@ -7,14 +6,13 @@ import {
   createHttpLink,
 } from '@apollo/client';
 import { setContext } from '@apollo/client/link/context';
-
-import LoginForm from './components/LoginForm';
-import Navbar from './components/Navbar';
-import SignupForm from './components/SignupForm';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
 import SearchBooks from './pages/SearchBooks';
 import SavedBooks from './pages/SavedBooks';
-
+import LoginForm from './components/LoginForm';
+import Navbar from './components/Navbar';
+import SignupForm from './components/SignupForm';
 
 const httpLink = createHttpLink({
   uri: '/graphql',
@@ -42,8 +40,8 @@ function App() {
         <>
           <Navbar />
           <Switch>
-            <Route exact path='/' component={SearchBooks} />
-            <Route exact path='/saved' component={SavedBooks} />
+            <Route exact path='/' pages={SearchBooks} />
+            <Route exact path='/saved' pages={SavedBooks} />
             <Route exact path="/login" component={LoginForm} />
             <Route exact path="/signup" component={SignupForm} />
             <Route render={() => <h1 className='display-2'>NoPage!</h1>} />
