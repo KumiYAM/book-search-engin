@@ -6,7 +6,7 @@ const resolvers = {
   Query: {
     me: async (parent, { email, password }, context) => {
       if (context.user) {
-        return User.findOne({ _id: context.user._id }).populate("saveBooks");
+        return User.findOne({ _id: context.user._id }).populate("saveBook");
       }
       throw new AuthenticationError("You need to be logged in!");
     }
@@ -56,7 +56,7 @@ const resolvers = {
     },
     saveBook: async (
       parent,
-      { bookId, title, description, authors, image, link },
+      { bookID, title, description, authors, image, link },
       context
     ) => {
       try {

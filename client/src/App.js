@@ -16,8 +16,11 @@ import SavedBooks from "./pages/SavedBooks";
 import Navbar from "./components/Navbar";
 //import SignupForm from './components/SignupForm';
 
+// const httpLink = createHttpLink({
+//   uri: "/graphql"
+// });
 const httpLink = createHttpLink({
-  uri: "/graphql"
+  uri: "http://localhost:3001/graphql"
 });
 
 const authLink = setContext((_, { headers }) => {
