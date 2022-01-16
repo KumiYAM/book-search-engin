@@ -20,7 +20,7 @@ import { saveBookIds, getSavedBookIds } from "../utils/localStorage";
 const SearchBooks = () => {
   // create state for holding returned google api data
   const [searchedBooks, setSearchedBooks] = useState([]);
-  const [saveBook, { error, data }] = useMutation(SAVE_BOOK);
+  const [saveBook] = useMutation(SAVE_BOOK);
   // create state for holding our search field data
   const [searchInput, setSearchInput] = useState("");
 
@@ -61,8 +61,8 @@ const SearchBooks = () => {
       console.log(bookData);
       setSearchedBooks(bookData);
       setSearchInput("");
-    } catch (err) {
-      console.error(err);
+    } catch (error) {
+      console.error(error);
     }
   };
 
@@ -70,6 +70,7 @@ const SearchBooks = () => {
   const handleSaveBook = async (bookId) => {
     // find the book in `searchedBooks` state by the matching id
     const bookToSave = searchedBooks.find((book) => book.bookId === bookId);
+
     //console.log(bookToSave);
     // get token
     const token = Auth.loggedIn() ? Auth.getToken() : null;
@@ -79,14 +80,14 @@ const SearchBooks = () => {
     }
 
     try {
-      const { data } = await saveBook({});
-      await saveBook({
-        variables: { input: bookToSave }
+      console.log(bookToSave);
+      const { data } = await saveBook({
+        variables: { ...bookToSave }
       });
-
+      console.log(data);
       // if book successfully saves to user's account, save book id to state
 
-      console.log("Book Saved!");
+      //console.log("Book Saved!");
       setSavedBookIds([...savedBookIds, bookToSave.bookId]);
     } catch (err) {
       console.error(err);
