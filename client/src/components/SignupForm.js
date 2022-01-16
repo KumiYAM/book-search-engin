@@ -1,8 +1,9 @@
 import React, { useState } from "react";
-import { useMutation } from "@apollo/client";
+
 import { Form, Button, Alert } from "react-bootstrap";
+import { useMutation } from "@apollo/client";
 import { ADD_USER } from "../utils/mutations";
-//import { createUser } from '../utils/API';
+//import { createUser } from "../utils/API";
 import Auth from "../utils/auth";
 
 const SignupForm = () => {
@@ -12,16 +13,22 @@ const SignupForm = () => {
     email: "",
     password: ""
   });
+
+  // set ADD_USER mutation - do we need data?
+  const [addUser, { error, data }] = useMutation(ADD_USER);
+
   // set state for form validation
   const [validated] = useState(false);
   // set state for alert
   const [showAlert, setShowAlert] = useState(false);
-  const [addUser] = useMutation(ADD_USER);
+
+  //update state based on form input changes
   const handleInputChange = (event) => {
     const { name, value } = event.target;
     setUserFormData({ ...userFormData, [name]: value });
   };
 
+  //submit form
   const handleFormSubmit = async (event) => {
     event.preventDefault();
 
@@ -36,10 +43,11 @@ const SignupForm = () => {
       const { data } = await addUser({
         variables: { ...userFormData }
       });
-      console.log(data);
-      Auth.addUser(data.addUser.token);
-    } catch (e) {
-      console.error(e);
+      //using the token created log the use in
+      Auth.login(data.addUser.token);
+    } catch (err) {
+      console.error(err);
+      setShowAlert(true);
     }
 
     setUserFormData({
