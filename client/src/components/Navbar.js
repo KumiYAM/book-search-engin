@@ -5,7 +5,6 @@ import SignUpForm from "./SignupForm";
 import LoginForm from "./LoginForm";
 
 import Auth from "../utils/auth";
-import { useQuery } from "@apollo/client";
 
 const AppNavbar = () => {
   // set modal display state

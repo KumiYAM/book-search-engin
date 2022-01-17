@@ -1,10 +1,10 @@
-
 # 🏗️ Book Search Engine
+
 ## Description
 
     This app is functioning as a books search engine.
     It's already set up to allow users to save book searches to the back end.
-     
+
 ## Table of Contents
 
 - [Title](#title)
@@ -19,44 +19,50 @@
 - [Language](#language)
 
 ## Technplogy used
-   Apollo Server
-   GraghQL (mutation and fetch and modify data)
-   GraghQL API
-   React
-   Node.js
+
+MongoDB
+Node.js / Express
+React
+Apollo Server
+GraghQL (mutation and fetch and modify data)
+GraghQL API
 
 ## Installation
-   Due to on going process of building the application, installation is not avalable to public now.<br/>
 
-   The application will be invoked by using the following command on command line:<br/>
-   `npm start`
+Due to on going process of building the application, installation is not avalable to public now.<br/>
+
+The application will be invoked by using the following command on command line:<br/>
+`npm start`
 
 ## Usage
+
 User Story:<br/>
 AS AN avid reader<br/>
 I WANT to search for new books to read<br/>
 SO THAT I can keep a list of books to purchase
 
 ## License
+
 ![unlicensed](https://img.shields.io/badge/unlicense-%24%7Blicense%7D-green)
 
-
 ## Contributing
+
 Undefined
 
 ## Tests
+
 In-progress (Insomnia)
 
 ## How to ask questions
-GitHub User Name :  ("https://github.com/KumiYAM")
+
+GitHub User Name : ("https://github.com/KumiYAM")
 
 ## Language
+
 <!-- ![JavaScript](https://img.shields.io/badge/ -->
+
 ![JavaScript](https://img.shields.io/badge/Language-JavaScript-yellow)
 ![css](https://img.shields.io/badge/Language-css-blue)
-
-
-
 
 ///////////////////////////note to self
 book-search-engine
@@ -65,7 +71,6 @@ M21/btc
 AS AN avid reader
 I WANT to search for new books to read
 SO THAT I can keep a list of books to purchase
-
 
 GIVEN a book search engine
 WHEN I load the search engine
